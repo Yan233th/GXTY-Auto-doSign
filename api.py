@@ -95,16 +95,15 @@ def do_sign(session, headers, config, pre_sign_id, nonce):
         return
 
     end_time = utils.get_current_timestamp_ms()
-    actual_duration = (end_time - start_time) // 1000
 
     extra_data = {
         "ass_id": config["ASS_ID"],
-        "duration": actual_duration,
+        "duration": config['DURATION_SECONDS'],
         "endTime": str(end_time),
         "historyTime": end_time,
         "pauseCurSecond": 0,
         "points": points,
-        "runCurSecond": actual_duration,
+        "runCurSecond": config['DURATION_SECONDS'],
         "startTime": start_time,
         "userId": config["USER_ID"],
     }
