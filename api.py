@@ -98,12 +98,12 @@ def do_sign(session, headers, config, pre_sign_id, nonce):
 
     extra_data = {
         "ass_id": config["ASS_ID"],
-        "duration": config['DURATION_SECONDS'],
+        "duration": config["DURATION_SECONDS"],
         "endTime": str(end_time),
         "historyTime": end_time,
         "pauseCurSecond": 0,
         "points": points,
-        "runCurSecond": config['DURATION_SECONDS'],
+        "runCurSecond": config["DURATION_SECONDS"],
         "startTime": start_time,
         "userId": config["USER_ID"],
     }
